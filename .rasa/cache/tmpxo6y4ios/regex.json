@@ -1,0 +1,14 @@
+[
+  {
+    "name": "drinks",
+    "pattern": "(\\bblack\\ coffee\\b|\\blatte\\b|\\biced\\ latte\\b|\\biced\\ coffee\\b)"
+  },
+  {
+    "name": "bakery",
+    "pattern": "(\\bcookie\\b|\\bcroissant\\b|\\bbegal\\b|\\bdonut\\b)"
+  },
+  {
+    "name": "size",
+    "pattern": "(\\blarge\\b|\\bmedium\\b|\\bsmall\\b)"
+  }
+]

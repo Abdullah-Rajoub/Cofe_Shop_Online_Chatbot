@@ -1,0 +1,133 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - buy
+  - list_drinks
+  - list_bakery
+  - offers
+  - contact
+  - making_complaint
+  - asking_for_complaint
+  - affirm
+  - deny
+  - order_drinks
+  - order_bakery
+  - order_general
+  - order_food
+  - bakery
+  - drinks
+  - number
+  - provide_size
+  - checkout
+
+entities:
+  - number
+  - bakery
+  - drinks
+  - size
+  - bill
+slots:
+
+  number:
+    type: text
+    initial_value: one
+    mappings:
+    - type: from_entity
+      entity: number
+      influence_conversation: false
+      
+
+
+  bakery:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bakery
+      intent: order_bakery
+      not_intent: order_drinks
+      influence_conversation: false
+  
+  bill:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bill
+      intent: check_out
+      influence_conversation: true
+
+
+  drinks:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drinks
+      intent: order_drinks
+    influence_conversation: false
+   
+
+  size:
+    type: categorical
+    values:
+      - small
+      - medium 
+      - large 
+    initial_value: small
+    mappings:
+    - type: from_entity
+      entity: size
+      intent: provide_size
+      not_intent: order_bakery
+    influence_conversation: false
+
+actions: 
+  - action_bakery_order
+  - action_size
+  - action_drinks_order
+  - action_checkout
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Erhbooo"
+    - text: "Ya Halah "
+    - text: "Halah, sm hubee"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Nshoofk bkeeer "
+    - text: "Fe Aman allah "
+    - text: "Bey, my friend "
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  #############################################################################################
+  utter_buy:
+    - text: ""
+  utter_list_drinks:
+    - text: "we have the following hot drinks:\n Black Coffee, Cappucino, and Mocha.\nWe have the following cold drinks:\nIced Coffee, and Iced Latte"
+  utter_list_bakery:
+    - text: "we have the following baked items:\nChocolate Donut, Croissant, Cookie, and Begals"
+  utter_list_offers:
+    - text: "visit the website to see the offers: http://dunkindonuts.sa/English/Menu/Pages/default.aspx"
+  utter_contact:
+    - text: "Phone: +966 11 4651001 Email: Info@dunkindonuts.sa Fax: +966 11 4657008​​"
+  utter_register_complaint:
+    - text: "Your complaint has been saved\nYou can check the status of your complaint by contacting us on the following medias:\nPhone: +966 11 4651001 Email: Info@dunkindonuts.sa Fax: +966 11 4657008​​"
+  utter_asking_for_complaint:
+    - text: "Can you please provide information about your complaint?"
+  utter_order:
+    - text: "the number of items is [ ]{drinks}"
+  utter_ask_for_size:
+    - text: "What size you want?"
+  utter_action_drinks_order:
+    - text: "You have ordered a {drinks}  with size {size}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+

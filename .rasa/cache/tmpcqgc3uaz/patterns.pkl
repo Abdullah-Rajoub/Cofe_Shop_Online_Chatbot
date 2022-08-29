@@ -1,0 +1,18 @@
+[
+  {
+    "name": "number",
+    "pattern": "(\\bone\\b)"
+  },
+  {
+    "name": "drinks",
+    "pattern": "(\\bcoffee\\b)"
+  },
+  {
+    "name": "bakery",
+    "pattern": "(\\bfood\\b)"
+  },
+  {
+    "name": "size",
+    "pattern": "(\\blarge\\b|\\bmedium\\b|\\bsmall\\b)"
+  }
+]

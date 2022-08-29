@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-coffee",
+      "2": "I-coffee",
+      "3": "L-coffee",
+      "4": "U-coffee",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-coffee": 1,
+      "I-coffee": 2,
+      "L-coffee": 3,
+      "U-coffee": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

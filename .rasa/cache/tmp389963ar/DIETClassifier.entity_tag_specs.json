@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-bakery",
+      "2": "I-bakery",
+      "3": "L-bakery",
+      "4": "U-bakery",
+      "5": "B-drinks",
+      "6": "I-drinks",
+      "7": "L-drinks",
+      "8": "U-drinks",
+      "9": "B-size",
+      "10": "I-size",
+      "11": "L-size",
+      "12": "U-size",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-bakery": 1,
+      "I-bakery": 2,
+      "L-bakery": 3,
+      "U-bakery": 4,
+      "B-drinks": 5,
+      "I-drinks": 6,
+      "L-drinks": 7,
+      "U-drinks": 8,
+      "B-size": 9,
+      "I-size": 10,
+      "L-size": 11,
+      "U-size": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
