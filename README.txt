@@ -1,3 +1,8 @@
+#the following is an explenation on how to get this project running on your own device. 
+
+# If you are not intersted in running it yourself you can watch the video of how it, by clicking the link below: 
+https://www.youtube.com/watch?v=32gTenjzUok
+
 #Before you can run this project you need the following: 
   1- python 3.8
   2- anaconda
